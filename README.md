@@ -13,5 +13,5 @@ How to use
     
     Stack = modlib.Modstack
     Names = ['foo.bar', 'alpha', 'hello.world']
-    Mpdules = { x: Stack.get(x) for x in Names }
+    Modules = { x: Stack.get(x) for x in Names }
 
