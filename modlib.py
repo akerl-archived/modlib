@@ -8,26 +8,18 @@ useful when you need to import dynamic modules with some degree of control
 from os.path import isfile, expanduser
 from importlib import import_module
 
-
 class Modstack(object):
     '''formula is used by other methods to determine path of module
         it is a .format-able string accepting keyword arguments
     target is the thing to import from the module
         use None to import the full module
-    cleanify controls if Modstack accepts "pythonic" module paths
-        if True: "." is converted to "/" and ".py" is appended
-        if False: No changes are made to the formula string
     '''
     def __init__(self,
                  formula='{0}',
-                 target=None,
-                 cleanify=True):
+                 target=None):
         self.stack = {}
         self.target = target
-        if cleanify:
-            self.formula = formula.replace('.', '/') + '.py'
-        else:
-            self.formula = formula
+        self.formula = formula
     '''args and kwargs are used for compilation
     '''
     def compile_path(self, *args, **kwargs):
@@ -48,4 +40,4 @@ class Modstack(object):
                 new_object = getattr(import_module(path), self.target)
             self.stack.update({path: new_object})
             return new_object
-
+ 
