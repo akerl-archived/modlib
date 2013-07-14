@@ -8,6 +8,7 @@ useful when you need to import dynamic modules with some degree of control
 from os.path import isfile, expanduser
 from importlib import import_module
 
+
 class Modstack(object):
     '''formula is used by other methods to determine path of module
         it is a .format-able string accepting keyword arguments
@@ -40,4 +41,4 @@ class Modstack(object):
                 new_object = getattr(import_module(path), self.target)
             self.stack.update({path: new_object})
             return new_object
- 
+
