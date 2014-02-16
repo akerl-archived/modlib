@@ -1,0 +1,19 @@
+language: python
+python:
+- 3.2
+- 3.3
+install:
+- pip install -r requirements.txt
+script:
+- pep8 .
+- nosetests --with-coverage --cover-package=modlib
+after_success:
+- coveralls
+notifications:
+  email: false
+  irc:
+    channels:
+      - ircs://irc.oftc.net:6697#akerl
+    channel_key: sekrit
+    template:
+      - '%{repository}/%{branch}/%{build_number}: %{message} -- %{build_url}'
