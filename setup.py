@@ -9,6 +9,5 @@ setup(
     author='Les Aker',
     author_email='me@lesaker.org',
     url='https://github.com/akerl/modlib',
-    py_modules=['modlib'],
+    packages=['modlib'],
 )
-

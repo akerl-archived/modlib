@@ -41,4 +41,3 @@ class Modstack(object):
                 new_object = getattr(import_module(path), self.target)
             self.stack.update({path: new_object})
             return new_object
-
