@@ -9,5 +9,12 @@ setup(
     author='Les Aker',
     author_email='me@lesaker.org',
     url='https://github.com/akerl/modlib',
+    license='MIT License',
     packages=['modlib'],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
 )
