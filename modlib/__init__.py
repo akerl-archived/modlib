@@ -1,1 +1,1 @@
-from modlib.modlib import *
+from .modlib import *
