@@ -15,7 +15,6 @@ notifications:
   email: false
   irc:
     channels:
-      - ircs://irc.oftc.net:6697#akerl
-    channel_key: sekrit
+    - secure: dPK8H6QMxzTQ58oBems1Wbk/C2ciWD3mq+9lLDOfsk4yJgFtyF9jDYQCg/AVlkt284uo28kh2h7lRct5wqjF7aeUMLbaosJByUeQasovFXPnatIPnRNDofkalRYgK2bpLnEN4kgiXsPqm0O4Bi4ONwCKwqcA8j+8w9f4aIUoEPg=
     template:
-      - '%{repository}/%{branch}/%{build_number}: %{message} -- %{build_url}'
+    - "%{repository}/%{branch}/%{build_number}: %{message} -- %{build_url}"
