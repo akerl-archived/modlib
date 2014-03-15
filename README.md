@@ -10,11 +10,35 @@ Simplifies importing dynamic modules. It exposes the Modstack class, which colle
 
 ## Usage
 
-    import modlib
+The basic usage is pretty straightforward:
 
-    Stack = modlib.Modstack
-    Names = ['foo.bar', 'alpha', 'hello.world']
-    Modules = { x: Stack.get(x) for x in Names }
+```
+import modlib
+
+stack = modlib.Modstack
+names = ['foo.bar', 'alpha', 'hello.world']
+modules = { x: stack.get(x) for x in names }
+```
+
+It's possible to use a custom formula for your module path. The default is `'{0}'`, which takes the name you pass to `.get()` directly. This is useful if your modules follow a common pattern. For instance, if your modules are stored in `./modules/{kind}/{name}`, you can pass that parameter to Modstack:
+
+```
+import modlib
+
+stack = modlib.Modstack(formula='modules.{kind}.{name}')
+fruits = ['apple', 'orange', 'tomato']
+fruit_modules = { x: stack.get(kind='fruit', name=x) for x in fruits }
+```
+
+You can also specify a target object, and only that object will be pulled from the module. For instance, if you want to pull the run() method from each of your modules:
+
+```
+import modlib
+
+stack = modlib.Modstack(target='run')
+actions = ['jump', 'swim', 'bike']
+action_methods = { x: stack.get(x) for x in names }
+```
 
 ## Installation
 
