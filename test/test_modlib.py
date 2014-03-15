@@ -1,8 +1,5 @@
 import unittest
 import modlib
-import sys
-import os
-
 
 class TestModlib:
     def test_modstack(self):
