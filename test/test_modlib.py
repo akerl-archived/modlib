@@ -1,6 +1,7 @@
 import unittest
 import modlib
 
+
 class TestModlib:
     def test_modstack(self):
         stack = modlib.Modstack()
