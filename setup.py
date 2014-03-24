@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(
     name='modlib',
-    version='0.1.4',
+    version='0.1.5',
     description='Dynamic module loader',
     author='Les Aker',
     author_email='me@lesaker.org',
