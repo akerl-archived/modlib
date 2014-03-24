@@ -1,4 +1,5 @@
 README.md
 LICENSE
 setup.py
-modlib.py
+modlib/__init__.py
+modlib/modlib.py
