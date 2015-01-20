@@ -1,5 +1,6 @@
 README.md
 LICENSE
+CHANGELOG.md
 setup.py
 modlib/__init__.py
 modlib/modlib.py
