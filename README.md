@@ -2,8 +2,9 @@ modlib
 =========
 
 [![Latest Version](https://img.shields.io/pypi/v/modlib.svg?style=flat)](https://pypi.python.org/pypi/modlib/)
-[![Coverage Status](https://img.shields.io/coveralls/akerl/modlib.svg?style=flat)](https://coveralls.io/r/akerl/modlib)
-[![Build Status](https://img.shields.io/travis/akerl/modlib.svg?style=flat)](https://travis-ci.org/akerl/modlib)
+[![Build Status](https://img.shields.io/circleci/project/akerl/modlib.svg)](https://circleci.com/gh/akerl/modlib)
+[![Coverage Status](https://img.shields.io/codecov/c/github/akerl/modlib.svg)](https://codecov.io/github/akerl/modlib)
+[![Code Quality](https://img.shields.io/codacy/a34888f436a94926bd65f8e20210a9d1.svg)](https://www.codacy.com/app/akerl/modlib)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://tldrlegal.com/license/mit-license)
 
 Simplifies importing dynamic modules. It exposes the Modstack class, which collects modules as you import them. If you need the same module again, it will return the existing module from the stack rather than reimporting it. It also supports getting a specific item from the modules rather than the full module
