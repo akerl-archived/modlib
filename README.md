@@ -21,6 +21,8 @@ names = ['foo.bar', 'alpha', 'hello.world']
 modules = { x: stack.get(x) for x in names }
 ```
 
+The module's object is returned by .get(), so `my_module = modlib.Modstack.get('foobar')` is equivalent to `import foobar as my_module`: if foobar.py has a "say_something" function, you'd call it with `my_module.say_something()`
+
 It's possible to use a custom formula for your module path. The default is `'{0}'`, which takes the name you pass to `.get()` directly. This is useful if your modules follow a common pattern. For instance, if your modules are stored in `./modules/{kind}/{name}`, you can pass that parameter to Modstack:
 
 ```
@@ -40,6 +42,8 @@ stack = modlib.Modstack(target='run')
 actions = ['jump', 'swim', 'bike']
 action_methods = { x: stack.get(x) for x in names }
 ```
+
+When specifying a target object, .get() returns that object. So if you have foobar.py that defines say_something(), loading the module with `my_method = modlib.Modstack(target='say_something').get('foobar')` would let you run say_something as `my_method()`
 
 ## Installation
 
