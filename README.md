@@ -3,6 +3,7 @@ modlib
 
 [![Latest Version](https://img.shields.io/pypi/v/modlib.svg?style=flat)](https://pypi.python.org/pypi/modlib/)
 [![Build Status](https://img.shields.io/circleci/project/akerl/modlib.svg)](https://circleci.com/gh/akerl/modlib)
+[![Dependency Status](https://img.shields.io/gemnasium/akerl/modlib.svg)](https://gemnasium.com/akerl/modlib)
 [![Coverage Status](https://img.shields.io/codecov/c/github/akerl/modlib.svg)](https://codecov.io/github/akerl/modlib)
 [![Code Quality](https://img.shields.io/codacy/a34888f436a94926bd65f8e20210a9d1.svg)](https://www.codacy.com/app/akerl/modlib)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://tldrlegal.com/license/mit-license)
