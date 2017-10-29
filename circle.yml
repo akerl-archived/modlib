@@ -5,6 +5,7 @@ machine:
   post:
     - cd /opt/circleci/.pyenv && git pull
     - for i in ${PYENV_VERSION//:/ } ; do pyenv install -s $i ; done
+    - 'ln -sfv /bin/true $(which virtualenv)'
 dependencies:
   pre:
     - echo 'a'
