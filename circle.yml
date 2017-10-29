@@ -2,20 +2,10 @@ machine:
   environment:
     PYENV_VERSION: 3.6.3:2.7.14
     TOXENV: py36,py27
-  post:
-    - cd /opt/circleci/.pyenv && git pull
-    - for i in ${PYENV_VERSION//:/ } ; do pyenv install -s $i ; done
-    - 'ln -sfv /bin/true $(which virtualenv)'
-compile:
-  override:
-    - echo 'd'
 dependencies:
   pre:
-    - echo 'a'
-  override:
-    - echo 'b'
-  post:
-    - echo 'c'
+    - cd /opt/circleci/.pyenv && git pull
+    - for i in ${PYENV_VERSION//:/ } ; do pyenv install -s $i ; done
 test:
   override:
     - tox -v
