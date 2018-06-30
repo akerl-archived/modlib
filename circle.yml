@@ -7,6 +7,7 @@ machine:
     TOXENV: py37,py27
 dependencies:
   override:
+    - sudo apt-get install -y libssl-dev
     - 'cd /opt/circleci/.pyenv && git pull'
     - 'for i in ${PYENV_VERSION//:/ } ; do pyenv install -s $i ; done'
     - pip install -r requirements.txt
