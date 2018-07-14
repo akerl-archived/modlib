@@ -1,4 +1,6 @@
 machine:
+  services:
+  - docker
   environment:
     PYENV_VERSION: 3.7.0:2.7.15
     TOXENV: py37,py27
