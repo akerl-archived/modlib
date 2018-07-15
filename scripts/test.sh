@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 set -euo pipefail
+
+[ -e /etc/profile ] && source /etc/profile
 
 for i in ${PYENV_VERSION//:/ } ; do
     pyenv install -s "$i"
